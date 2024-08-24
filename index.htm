@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XHub Gym</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="gym-logo.png" alt="FitHub Gym Logo">
+    </div>
+    <nav>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to XHub Gym</h1>
+      <p>Your Fitness Journey Begins Here</p>
+      <a href="#services" class="btn">Explore Our Services</a>
+    </div>
+  </section>
+
+  <section id="about" class="about dark-theme">
+    <div class="about-content">
+      <h2>About XHub Gym</h2>
+      <p>At XHub Gym, we believe in providing a holistic approach to fitness. Our state-of-the-art facilities and expert trainers are dedicated to helping you achieve your fitness goals.</p>
+      <p>Whether you're looking to lose weight, build muscle, or improve your overall health, XHub Gym offers personalized training programs tailored to your needs.</p>
+      <a href="#services" class="btn">Explore Our Services</a>
+    </div>
+    <div class="about-image">
+      <img src="about-gym.jpg" alt="About Image">
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-items">
+      <div class="service-item">
+        <img src="service1.jpg" alt="Personal Training">
+        <h3>Personal Training</h3>
+        <p>Get one-on-one training sessions with our certified trainers who will create a customized workout plan to meet your fitness goals.</p>
+      </div>
+      <div class="service-item">
+        <img src="service2.jpg" alt="Group Classes" style = "height:400px;">
+        <h3>Group Classes</h3>
+        <p>Join our group classes including Yoga, Zumba, Pilates, and more. Stay motivated by working out with others and having fun.</p>
+      </div>
+      <div class="service-item" >
+        <img src="service3.jpg" alt="Nutrition Counseling" style = "height:400px;">
+        <h3>Nutrition Counseling</h3>
+        <p>Our nutrition experts will help you create a balanced diet plan that complements your workout routine and helps you achieve your fitness goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership" class="membership">
+    <div class="membership-form">
+      <h2>Become a Member</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="membership" required>
+          <option value="" disabled selected>Select Membership Type</option>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="annual">Annual</option>
+        </select>
+        <textarea name="message" placeholder="Additional Message" rows="5"></textarea>
+        <button type="submit">Join Now</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>456 Fitness Street, Mumbai, India</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <p>+91 98765 43210</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>thiru@Xhubgym.in</p>
+        </div>
+      </div>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="gym-logo.png" alt="Logo">
+      </div>
+      <nav class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Membership</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <p class="footer-text">&copy; 2023 XHub Gym. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Smooth Scrolling and Responsive Menu -->
+  <script>
+    // Smooth Scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Responsive Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+    
+    // JavaScript for Responsive Navigation Menu
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Toggle the navigation menu on hamburger click
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open');
+    });
+
+    // Optionally, close the menu when a navigation item is clicked
+    const navItems = document.querySelectorAll('.nav-links li a');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+        });
+    });
+});
+
+  </script>
+</body>
+</html>
